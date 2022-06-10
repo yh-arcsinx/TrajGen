@@ -18,7 +18,7 @@ class DCGAN(object):
          batch_size=64, sample_num = 64, output_height=64, output_width=64,
          y_dim=None, z_dim=100, gf_dim=64, df_dim=64,
          gfc_dim=1024, dfc_dim=1024, c_dim=3, dataset_name='default',
-         input_fname_pattern='*.jpg', checkpoint_dir=None, sample_dir=None, data_dir='./data'):
+         input_fname_pattern='*.jpeg', checkpoint_dir=None, sample_dir=None, data_dir='./data'):
     """
 
     Args:
@@ -78,6 +78,7 @@ class DCGAN(object):
       data_path = os.path.join(self.data_dir, self.dataset_name, self.input_fname_pattern)
       self.data = glob(data_path)
       if len(self.data) == 0:
+        print(data_path)
         raise Exception("[!] No data found in '" + data_path + "'")
       np.random.shuffle(self.data)
       imreadImg = imread(self.data[0])
