@@ -18,7 +18,7 @@ flags.DEFINE_integer("input_width", None, "The size of image to use (will be cen
 flags.DEFINE_integer("output_height", 64, "The size of the output images to produce [64]")
 flags.DEFINE_integer("output_width", None, "The size of the output images to produce. If None, same value as output_height [None]")
 flags.DEFINE_string("dataset", "celebA", "The name of dataset [celebA, mnist, lsun]")
-flags.DEFINE_string("input_fname_pattern", "*.jpeg", "Glob pattern of filename of input images [*]")
+flags.DEFINE_string("input_fname_pattern", "*.jpg", "Glob pattern of filename of input images [*]")
 flags.DEFINE_string("checkpoint_dir", "/root/paimon/TrajGen/DCGAN_Model/checkpoint", "Directory name to save the checkpoints [checkpoint]")
 flags.DEFINE_string("data_dir", "/root/paimon/TrajGen/DCGAN_Model/data", "Root directory of dataset [data]")
 flags.DEFINE_string("sample_dir", "/root/paimon/TrajGen/DCGAN_Model/samples", "Directory name to save the image samples [samples]")
